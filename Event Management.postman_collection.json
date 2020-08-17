@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "7b0fadb9-dcad-456f-8375-39f01113893e",
+		"name": "Event Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Event Management",
+			"item": [
+				{
+					"name": "Event Creation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk3NjQwMDc1LCJqdGkiOiJhMWNlNjQ2YWM0YTE0Mjk4OGZkNjYwZDY4YzA2ZGM0ZiIsInVzZXJfaWQiOjF9.jYaQC3-MWFttlWmaPyadJWz8OJwI3yxAcm0o5hUUysY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"eventName\": \"eventName-1\",\n    \"isEventNameRequired\": true,\n    \"description\": \"Event description\",\n    \"isDescriptionRequired\": false,\n    \"duration\": \"2\",\n    \"isDurationRequired\": false,\n    \"location\": \"Chennai\",\n    \"isLocationRequired\": false,\n    \"fees\": \"200\",\n    \"isFeesRequired\": false,\n    \"tags\": \"#chennai\",\n    \"isTagsRequired\": false,\n    \"maxParticipants\": \"2\",\n    \"isMaxParticipantsRequired\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/public/v1/event-management/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"v1",
+								"event-management",
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Events",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk3NjA0NTk4LCJqdGkiOiJmNWI0YTg4YjdmNzU0MWU4YmNhMzk2YWI1ZTAxM2Y1YSIsInVzZXJfaWQiOjF9.BfTE2JYe-8zIJoLq599Ey5u-WBKYa9W4xurnkwDzW28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/public/v1/event-management/event-list/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"v1",
+								"event-management",
+								"event-list",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk3NDcyNDUxLCJqdGkiOiI5NTU4ZGI1NDA5NDg0YjRjYmZhOGQyN2NmZjk2ZDRmZiIsInVzZXJfaWQiOjJ9.cKtTS5mivxhQB5WOW9NGJc3PZQG0vd_jE6xpnpsMfGY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/public/v1/event-management/events/cca8ad1e-345f-4ac9-8a1a-71d7cad6aafb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"v1",
+								"event-management",
+								"events",
+								"cca8ad1e-345f-4ac9-8a1a-71d7cad6aafb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk3NjA0NTk4LCJqdGkiOiJmNWI0YTg4YjdmNzU0MWU4YmNhMzk2YWI1ZTAxM2Y1YSIsInVzZXJfaWQiOjF9.BfTE2JYe-8zIJoLq599Ey5u-WBKYa9W4xurnkwDzW28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/public/v1/event-management/events/b1665205-d313-444c-90a8-850b7682ed97",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"v1",
+								"event-management",
+								"events",
+								"b1665205-d313-444c-90a8-850b7682ed97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk3NDczODc4LCJqdGkiOiJlYTVjNjhkMDZiY2Q0MGU3OWZmNTgyMmEwZjhlNjU0ZiIsInVzZXJfaWQiOjJ9.wu0CfLpAeJk2-xgtVaB74Vs4avO3a2DBkxvzT1-oT-U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"eventName\": \"Buff\",\n    \"isEventNameRequired\": false,\n    \"description\": \"This field is required.\",\n    \"isDescriptionRequired\": false,\n    \"duration\": \"2\",\n    \"isDurationRequired\": false,\n    \"location\": \"This field is required.\",\n    \"isLocationRequired\": false,\n    \"fees\": \"200\",\n    \"isFeesRequired\": false,\n    \"tags\": \"This field is required.\",\n    \"isTagsRequired\": false,\n    \"maxParticipants\": \"2\",\n    \"isMaxParticipantsRequired\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/public/v1/event-management/events/b6a81d57-4104-4929-861a-fa2ac3e6f4de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"v1",
+								"event-management",
+								"events",
+								"b6a81d57-4104-4929-861a-fa2ac3e6f4de"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Event Participation",
+			"item": [
+				{
+					"name": "Event Participate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk3NTIxMjYzLCJqdGkiOiJkMTViNTVmNGM1ODk0ODQwYmZjODk3ZjdiZTA5NDE3MCIsInVzZXJfaWQiOjN9.EU9pskkMtBMHIqpfqMxuM0AqqeIi2H06k5v1XwWlf4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"eventName\": \"event-participant-1\",\n    \"description\": \"I am a participant\",\n    \"duration\": \"30\",\n    \"location\": \"\",\n    \"fees\": \"30\",\n    \"tags\": \"#participant\",\n    \"maxParticipants\": \"4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/public/v1/event-management/events/20b4068e-f58e-405b-9402-f1c160a2ed91/participate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"v1",
+								"event-management",
+								"events",
+								"20b4068e-f58e-405b-9402-f1c160a2ed91",
+								"participate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Event Participants",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk3NTcwOTE5LCJqdGkiOiJlZDM5NGFlYWU3NTU0NTFiYjNlYzA4NzhhZjhlYTQxZiIsInVzZXJfaWQiOjJ9.DbxIyBiZ-CeOI1BH7WaDOxMfx34y0NdJ9qg_ThBLHfI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/public/v1/event-management/event-participants/e59abb3a-ad4a-4489-b774-a1567eb72490/participants/10?page=1&ordering=eventName&search=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"v1",
+								"event-management",
+								"event-participants",
+								"e59abb3a-ad4a-4489-b774-a1567eb72490",
+								"participants",
+								"10"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "ordering",
+									"value": "eventName"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Test\",\n    \"emailAddress\": \"test@mail.com\",\n    \"password\": \"Test1234$\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/public/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTU5ODg0ODQ2MiwianRpIjoiM2VkMjI2ODQ4ZGZhNDhmMmIyNGU1M2EzNjA2YTYzOTIiLCJ1c2VyX2lkIjoyfQ.DvAOxxDMu_J6_tJef-ZJ5mIonADojrN1WRYpmphxvOo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/public/v1/user/token/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"v1",
+								"user",
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"test@mail.com\",\n    \"password\": \"Test1234$\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/public/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
